@@ -46,5 +46,5 @@ function civicrm_api3_sparkpostbounceapi_Bounceevent($params) {
     // add html error code
     throw new API_Exception($e->getMessage(), /*errorCode*/ 500);
   }
-  return civicrm_api3_create_success(['Bounce successful.'], $params, 'sparkpostbounceapi', 'bounceevent');
+  return civicrm_api3_create_success(["message" => "Bounce handling successful.", "http_code" => "200"], $params, 'sparkpostbounceapi', 'bounceevent');
 }

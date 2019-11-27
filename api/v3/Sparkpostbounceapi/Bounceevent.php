@@ -32,6 +32,8 @@ function _civicrm_api3_sparkpostbounceapi_bounceevent_spec(&$spec) {
  */
 function civicrm_api3_sparkpostbounceapi_Bounceevent($params) {
 
+  CRM_Core_Error::debug_log_message("[be.aivl.sparkpostbounceapi] Received boucne event. Params: " . json_encode($params));
+
   $sparkpost_bounce_event = new CRM_Sparkpostbounceapi_BounceEvent(
     $params['type'],
     $params['campaign_id'],

@@ -80,9 +80,9 @@ class CRM_Sparkpostbounceapi_BounceEvent {
     $dao->domain_id  = CRM_Core_Config::domainID();
     $dao->is_default = TRUE;
     if ( $dao->find(true) ) {
-      $rpRegex = '/^' . preg_quote($dao->localpart) . '(b|c|e|o|r|u)\.(\d+)\.(\d+)\.([0-9a-f]{16})/';
+      $rpRegex = '/^' . preg_quote($dao->localpart) . '(b|c|e|m|o|r|u)\.(\d+)\.(\d+)\.([0-9a-f]{16})/';
     } else {
-      $rpRegex = '/^(b|c|e|o|r|u)\.(\d+)\.(\d+)\.([0-9a-f]{16})/';
+      $rpRegex = '/^(b|c|e|m|o|r|u)\.(\d+)\.(\d+)\.([0-9a-f]{16})/';
     }
     $matches = array();
     if (preg_match($rpRegex, $this->recipient, $matches)) {

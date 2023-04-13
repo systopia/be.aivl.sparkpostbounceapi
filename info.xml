@@ -20,11 +20,16 @@
   <compatibility>
     <ver>5.0</ver>
   </compatibility>
-  <comments></comments>
+  <comments/>
   <requires>
     <ext version="~1.3">com.cividesk.email.sparkpost</ext>
   </requires>
   <civix>
     <namespace>CRM/Sparkpostbounceapi</namespace>
+    <format>23.02.1</format>
   </civix>
+  <classloader>
+    <psr0 prefix="CRM_" path="."/>
+    <psr4 prefix="Civi\" path="Civi"/>
+  </classloader>
 </extension>
